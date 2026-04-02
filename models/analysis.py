@@ -26,5 +26,5 @@ def new_model(prompt):
     max_output_tokens=4096,
     top_p=1,
     temperature=1,
-    stream=True
+    stream=False
   )

@@ -1,21 +1,21 @@
-#from data import ask
-from prompts.analysis_p import analysis_prompt
-from models.analysis import call_analysis, new_model
-from data import improved_json
+from data import ask, improved_json
+from prompts import analysis_prompt
+from models import call_analysis
 
+def main():
+    #ASKING
+    raw_data = ask()
 
-raw_data = {"bio":"biblical motherhood | underconsumption realistic homemaking with littles | homeschool Email: ryliejasminebusiness@gmail.com Email: ariel.roache@grail-talent.com",
-            "caption":["I think we can all relate to the constant struggle it is to keep a home with little kids in-tow. From the endless laundry, many messes, mental load—— it can be a lot!I tried so many things and finally figured out what ACTUALLY works. Every home and family is so different, so take what you need and leave the rest.#1 You need a clear plan AND a stop-time. This is SO important because the work is literally endless! In order to keep yourself motivated and focused, you need to know what you're doing, and more importantly, when you can stop. Try to have one small list of things per day. When you accomplish them, BE DONE! Enjoy the fruit of your labor and you will be way less likely to burnout.#2 You need metal stimulation, change of scenery, and add-ins during the mundane seasons. So often in my early motherhood, I found I had enough time to take care of my home—— but I didn't want to. When this happens, it's because we have less intellectual stimulation than we actually need to be interested in something. Leaving the house (so to give yourself a change of pace and an actual deadline to finish your tasks, rather than taking a whole day to do things) is a great way to do this. Additionally, throwing yourself into things that interest you, can really increase your motivation for the mundane! Most moms need to do more difficult things, rather than more mundane things. You will be surprised how little time your house takes when you're excited about something.#3 I implemented a 30-3 rule in my home. I will spend 30 minutes, 3 times per day, doing chores—— and then be done.Here is my exact routine:Mornings ——> start load of laundry, make beds, unload dishwasher.Afternoons——> clean up kitchen from breakfast and lunch, fold and put away laundry, weekly chore.Nights——> clean kitchen, sweep or vacuum floors, tidy house before bed.These simple steps have completely transformed my ability to stay on top of things. Be sure to save for later and let me know what helps you down in the comments. ","Your faith is under attack. Have you ever wondered why it seems so difficult to find the time to read your bible, pray, go to church—— have you considered it is the one thing that will help you the most in motherhood, and simultaneously the thing the enemy wants to keep you from the most?When you became a mother, God quite literally entrusts you with little souls that will live for eternity and be used for God's incredible purposes. The devil wants to destroy them and you by any means necessary.When we become mothers a lot of things change. Sleep deprivation, lack of a schedule, unpredictability, the list of responsibilities gets longer and longer. Kids waking you up at the crack of dawn, not napping, and refusing to go to bed. Maybe you're working outside of the home and time to read your Bible seems like a far-off fantasy, let alone attending church with a schedule like yours.The harsh reality is that you are either moving forward in your faith, or backwards. And if you are letting the enemy and yourself pander to each and every setback, you are only hurting yourself and your family for generations to come.WHERE TO START:If you can't find time, adapt your time. Switch your podcasts for sermons. Switch your music for worship. Switch your scrolling for reading the word. Pray during your free moments in the day. The best thing you can do as a busy mom, is simply switch things out.So many of us are unable to have that hour quiet time in the morning, or attend the weekly Bible study with little kids always in tow. If you can do those things, great! But if you are finding yourself in a season of complete business, don't underestimate what the Lord is able to do with the little time you have.I have found the most profound and impactful moments with the Lord are not during my mornings in the word or during a sermon on Sunday, *I'm typically the one in the back with the baby,* they are during those little pockets of time that I choose to give to God.The more we do what we can, the more we see God work in our hearts, the little moments of motherhood, and the big challenges of life. He is with you always. 🤍Share this with a friend"]}
-#ASKING
-#raw_data = ask()
-#PROMPTING
-prompt = analysis_prompt(raw_data)
-print(prompt)
-#CALLING AI
-ai_output = call_analysis(prompt)
-print(ai_output)
-ai_output2 = new_model(prompt)
-print(ai_output2)
+    #PROMPTING
+    prompt = analysis_prompt(raw_data)
+    print(prompt)
 
-#IMPROVING JSON
-#print(improved_json(ai_output))
+    #CALLING AI
+    ai_output = call_analysis(prompt)
+
+    #IMPROVING JSON
+    improved_output = improved_json(ai_output)
+    print(improved_output)
+
+if __name__ == "__main__":
+    main()
