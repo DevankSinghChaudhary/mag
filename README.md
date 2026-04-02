@@ -20,8 +20,6 @@ This is monetisation audit generator work via "NVIDIA_API" (can work with any ai
  
 ## Tech Stack
 - Python
-- Requests / OpenAI
-- python-dotenv
 
 # **Installation**
 
