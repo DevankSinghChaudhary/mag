@@ -23,3 +23,20 @@ This is monetisation audit generator work via "NVIDIA_API" (can work with any ai
 ```bash
 git clone https://github.com/devanksinghchaudhary/mag.git
 cd mag
+
+### 2. Create virtual environment (python/optional)
+```bash
+python -m venv env
+
+### 3. Avtivate virtual environment
+### Windows(PowerShell):
+```bash
+env\Scripts\activate
+
+### Mac/Linux
+```bash
+source env/bin/activate
+
+### 3. Install the dependencies
+```bash
+pip install -r requirements.txt
