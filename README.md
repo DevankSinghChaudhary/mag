@@ -1,6 +1,7 @@
 # MAG (Monetisation Audit Generator)
 
 This is monetisation audit generator work via "NVIDIA_API" (can work with any ai api). Generate audit based on creator's bio, captions.
+
 [![Instagram](https://img.shields.io/badge/Owner-Follow-E4405F?logo=instagram&logoColor=white)](https://instagram.com/devanksinghchaudhary)
 
 # 🔍 MAG (v1.0)
