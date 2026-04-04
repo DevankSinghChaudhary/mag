@@ -1,8 +1,10 @@
-def chunks(output):
+def chunks(data):
+    if not isinstance(data, dict):
+        raise ValueError("Data is not Dict!!!")
     chunks = []
     fixed = {}
     dynamic = {}
-    for key, value in output.items():
+    for key, value in data.items():
         if isinstance(value, list):
             dynamic[key]=value
         else:

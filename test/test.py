@@ -1,10 +1,9 @@
-niche = { "niche": "Car","audience": "Hagemaru","Value":["gap1","gap2"]}
-fixed = {}
-dynamic = {}
 
 
-def main():
+def main(niche):
     chunks = []
+    fixed = {}
+    dynamic = {}
     for key, value in niche.items():
         if isinstance(value, list):
             dynamic[key]=value
@@ -18,4 +17,4 @@ def main():
             chunks.append(chunk)
     return chunks
 
-print(main())
+

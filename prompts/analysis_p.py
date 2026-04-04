@@ -25,6 +25,8 @@ def analysis_prompt(raw_data):
       "List 3-5 highly relevant product ideas tailored to this creator"
     ]
   }}
+
+  Specifically all keys and values with double qoutes (""), not single qoute ('') 
   """
   return prompt
 

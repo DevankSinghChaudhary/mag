@@ -1,6 +1,7 @@
+import json
 from chunks import chunks
 from data import ask, improved_output, cycle
-from prompts import analysis_prompt, chunks
+from prompts import analysis_prompt
 from models import call_analysis, chunks_model
 
 def main():
@@ -11,8 +12,10 @@ def main():
     ai_output = call_analysis(prompt)
 
     output = improved_output(ai_output)
-    chunks_data = chunks(output)
+    data = json.loads(output)
 
-
+    chunks_data = chunks(data)
+    print(chunks_data)
+    print(len(chunks_data))
 if __name__ == "__main__":
-    output = main()
+    main()
